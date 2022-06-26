@@ -409,7 +409,7 @@ body._lock {
     }
 }
 
-.menu__list {
+.footer__nav .menu__list {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -417,7 +417,7 @@ body._lock {
     gap: 8px;
 }
 
-.menu__list .menu__link {
+.footer__nav .menu__list .menu__link {
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
@@ -425,7 +425,7 @@ body._lock {
     transition: 0.3s ease;
 }
 
-.menu__list .menu__link:hover {
+.footer__nav .menu__list .menu__link:hover {
     color: #ffc700;
 }
 
