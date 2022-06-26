@@ -1,0 +1,9 @@
+@import "base/_mixins.scss";
+@import "base/_vars.scss";
+@import "base/nullstyle";
+@import "base/fonts";
+@import "base/wrapper";
+
+body {
+  font-size: 20px;
+}

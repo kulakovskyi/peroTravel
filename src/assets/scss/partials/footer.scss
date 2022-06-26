@@ -1,0 +1,155 @@
+.footer {
+  padding: 30px 0;
+  background: #ededed;
+}
+
+.footer__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+
+  @include breakpoint(677px) {
+    flex-direction: column;
+  }
+}
+
+.footer__item {
+  @extend %flex-center;
+  gap: 110px;
+
+  @include breakpoint($tablet-bp) {
+    gap: 20px;
+  }
+}
+
+.footer__item__next {
+  @include breakpoint($mobile-bp) {
+    flex-direction: column;
+  }
+}
+
+.menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .menu__link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #282828;
+    transition: 0.3s ease;
+
+    &:hover {
+      color: #ffc700;
+    }
+  }
+}
+
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .footer__contact {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #282828;
+    transition: 0.3s ease;
+
+    @include breakpoint($mobile-bp) {
+      justify-content: center;
+    }
+
+    svg {
+      transition: 0.3s ease;
+    }
+
+    .telegram__svg {
+      stroke: #282828;
+    }
+
+    &:hover .telegram__svg {
+      stroke: #ffc700;
+    }
+
+    &:hover svg {
+      fill: #ffc700;
+    }
+
+    &:hover {
+      color: #ffc700;
+    }
+  }
+}
+
+.footer__contact {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #282828;
+  transition: 0.3s ease;
+
+  svg {
+    transition: 0.3s ease;
+  }
+
+  &:hover svg {
+    fill: #ffc700;
+  }
+
+  &:hover {
+    color: #ffc700;
+  }
+}
+
+.footer__contact__it {
+  margin: 0 0 20px 0;
+}
+
+.footer__social__row {
+  @extend %flex-center;
+  justify-content: flex-start;
+  gap: 10px;
+
+  @include breakpoint($mobile-bp) {
+    justify-content: center;
+  }
+
+  .social__link__vk {
+    fill: #bc0000;
+    transition: 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .social__link__insta {
+    fill: #e59b06;
+    transition: 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .social__link__facebook {
+    stroke: #17c1bc;
+    stroke-width: 2px;
+    fill: transparent;
+    transition: 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.about {
+  padding: 137px 0 136px 0;
+  background: url(../../assets/images/about/about-image.png) no-repeat;
+  background-size: cover 100%;
+
+  @include breakpoint(1235px) {
+    background-position: -400px 0;
+  }
+
+  @include breakpoint(775px) {
+    background-position: -600px 0;
+  }
+
+  @include breakpoint($mobile-bp) {
+    background-position: -800px 0;
+  }
+
+  .about__row {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .about__info {
+    max-width: 542px;
+    padding: 61px 75px 105px;
+    background: #ededed;
+    border-radius: 10px;
+
+    @include breakpoint($mobile-bp) {
+      padding: 43px;
+    }
+  }
+
+  .about__title {
+    margin: 0 0 40px 0;
+  }
+
+  .about__text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #282828;
+
+    &:first-of-type {
+      margin: 0 0 20px 0;
+    }
+  }
+}

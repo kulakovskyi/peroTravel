@@ -1,0 +1,127 @@
+.menu__icon {
+  display: none;
+  @include breakpoint($tablet-bp) {
+    display: block;
+    background: #ffffff;
+    border-radius: 8px;
+    height: 39px;
+    width: 39px;
+    position: relative;
+    z-index: 5;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 3px;
+      background: black;
+      border-radius: 8px;
+      top: 11px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      transition: 0.3s ease;
+    }
+
+    &._active::before {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 3px;
+      background: black;
+      border-radius: 8px;
+      bottom: 11px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      transition: 0.3s ease;
+    }
+
+    &._active::after {
+      bottom: 50%;
+      left: 50%;
+      transform: translate(-50%, 50%) rotate(45deg);
+    }
+
+    span {
+      position: absolute;
+      width: 20px;
+      height: 3px;
+      background: black;
+      border-radius: 8px;
+      bottom: 11px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: 0.3s ease;
+    }
+
+    &._active span {
+      opacity: 0;
+    }
+  }
+}
+
+.header__menu {
+  @include breakpoint($tablet-bp) {
+    position: fixed;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.959);
+    overflow: auto;
+    left: 0;
+    z-index: -1;
+    transition: top 0.3s ease 0s;
+
+    &::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.671);
+      height: 72px;
+    }
+
+    &._active {
+      top: 0;
+    }
+  }
+}
+
+.header__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+
+  .menu__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 56px;
+
+    @include breakpoint($tablet-bp) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: 100px;
+    }
+
+    .menu__link {
+      font-weight: 600;
+      font-size: 18px;
+      color: #ffffff;
+      transition: 0.3s ease;
+
+      &:hover {
+        color: #003c80;
+      }
+    }
+  }
+}

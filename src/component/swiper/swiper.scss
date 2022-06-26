@@ -1,0 +1,96 @@
+.swiper {
+  .swiper-slide {
+    @extend %flex-center;
+  }
+}
+
+/* кнопки за контейнером(в html выносим за контейнер свайпера)*/
+
+.teckets__container {
+  max-width: 1300px;
+  padding: 0 95px;
+  position: relative;
+
+  @include breakpoint($mobile-bp) {
+    max-width: 1140px;
+    padding: 0 15px;
+  }
+}
+
+.slider__buttons__cont {
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+
+  @include breakpoint($mobile-bp) {
+    top: 108%;
+  }
+
+  .swiper-button-prev {
+    left: 15px;
+    width: 40px;
+    height: 60px;
+    @extend %flex-center;
+    padding: 30px 10px;
+    border: 1px solid #ffffff;
+    border-radius: 10px 0px;
+    transition: 0.3s ease;
+
+    @include breakpoint($mobile-bp) {
+      left: 35%;
+    }
+
+    svg {
+      fill: white;
+      transition: 0.3s ease;
+    }
+
+    &:hover svg {
+      fill: #472eaf;
+    }
+
+    &:hover {
+      border: 1px solid #472eaf;
+    }
+  }
+
+  .swiper-button-next {
+    right: 15px;
+    width: 40px;
+    height: 60px;
+    @extend %flex-center;
+    padding: 30px 10px;
+    border: 1px solid #ffffff;
+    border-radius: 10px 0px;
+    transition: 0.3s ease;
+
+    @include breakpoint($mobile-bp) {
+      right: 35%;
+    }
+
+    svg {
+      fill: white;
+      transition: 0.3s ease;
+    }
+
+    &:hover svg {
+      fill: #472eaf;
+    }
+
+    &:hover {
+      border: 1px solid #472eaf;
+    }
+  }
+
+  .swiper-button-next:after {
+    content: none;
+  }
+
+  .swiper-button-prev:after {
+    content: none;
+  }
+}

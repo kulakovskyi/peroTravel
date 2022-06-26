@@ -1,0 +1,165 @@
+.travel {
+  padding: 237px 0 248px 0;
+  background: url(../../assets/images/travel/travel-bg.jpg) no-repeat;
+  background-size: cover;
+  position: relative;
+
+  @include breakpoint($tablet-bp) {
+    padding: 320px 0 321px 0;
+  }
+
+  @include breakpoint($mobile-bp) {
+    padding: 201px 0 200px 0;
+  }
+
+  .travel__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    @include breakpoint($mobile-bp) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 98px;
+    }
+  }
+
+  .travel__item {
+    &:last-child {
+      align-self: flex-end;
+    }
+  }
+
+  .travel__title {
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 88px;
+    color: #ffffff;
+    display: inline-block;
+    position: relative;
+
+    @include breakpoint($tablet-bp) {
+      font-size: 48px;
+      line-height: 59px;
+      margin: 0 0 12px 0;
+    }
+
+    @include breakpoint($mobile-bp) {
+      font-size: 36px;
+      line-height: 44px;
+    }
+
+    @include breakpoint($mobile-min-bp) {
+      font-size: 35px;
+    }
+
+    &::after {
+      content: "вместе с";
+      position: absolute;
+      font-family: "mr_kindlyjasminegregular";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 64px;
+      line-height: 64px;
+      color: #ffc700;
+      bottom: -27px;
+      right: -100px;
+
+      @include breakpoint($tablet-bp) {
+        font-size: 48px;
+        line-height: 48px;
+        bottom: -28px;
+        right: -72px;
+      }
+
+      @include breakpoint($mobile-bp) {
+        bottom: -35px;
+        right: -30px;
+      }
+
+      @include breakpoint($mobile-min-bp) {
+        bottom: -35px;
+        right: -7px;
+      }
+    }
+  }
+
+  .travel__title__uset {
+    font-family: sans-serif;
+    font-weight: 900;
+    font-size: 96px;
+    line-height: 85px;
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    margin: 0 0 60px 0;
+
+    @include breakpoint($tablet-bp) {
+      font-size: 96px;
+      line-height: 90%;
+      margin: 0 0 90px 0;
+    }
+
+    @include breakpoint($mobile-bp) {
+      font-size: 72px;
+      line-height: 90%;
+    }
+
+    @include breakpoint($mobile-min-bp) {
+      font-size: 65px;
+    }
+  }
+}
+
+//social btn
+.travel__social__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  .social__link svg {
+    transition: 0.3s ease;
+    fill: #ffffff;
+  }
+
+  .social__link__facebook svg {
+    fill: transparent;
+    stroke: white;
+    stroke-width: 2px;
+  }
+
+  .social__link__vk:hover svg {
+    fill: #bc0000;
+  }
+
+  .social__link__insta:hover svg {
+    fill: #e59b06;
+  }
+
+  .social__link__facebook:hover svg {
+    stroke: #17c1bc;
+  }
+}
+
+//swiper-slider
+.travel__slider {
+  max-width: 1200px;
+  overflow: hidden;
+  position: absolute;
+  bottom: -100px;
+  right: -30%;
+
+  @include breakpoint(918px) {
+    left: 0;
+    right: auto;
+  }
+
+  .swiper {
+    overflow: visible;
+    .swiper-slide {
+      @extend %flex-center;
+    }
+  }
+}
